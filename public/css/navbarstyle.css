@@ -37,6 +37,21 @@ body{
     font-size: 15px;
   }
 
+/* .nav-item{
+  float: right!important;
+} */
+
+.navbar-nav {
+    float: right;
+    margin: 0;
+}
+
+@media only screen and (max-width:768px){
+  .navbar-nav {
+      margin: 0;
+      float: left;
+    }
+}
 
   #highlights {
     font-size: 20px;
@@ -49,9 +64,10 @@ body{
 
   }
   .nav > li > a{
-    font-size: 18px;
+    font-size: 22px;
     padding-top: 15px;
-    color: #fff;
+    padding-right: 40px;
+    padding-bottom: 30px;
   }
 
   #nav-content{
