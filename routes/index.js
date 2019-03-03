@@ -15,6 +15,10 @@ router.get('/', function(req, res, next) {
     });
   })
 });
+
+router.get('/Achievements',function (req, res , next) {
+        res.render("Achievements");
+})
 router.get('/option',function (req,res,next) {
     session = req.session;
     if (session.uniqueID) {
@@ -27,7 +31,7 @@ router.get('/option',function (req,res,next) {
     }
   });
   router.get('/delete/:title', function(req, res, next) {
-    
+
     var deleteTitle = req.params.title;
     news.deleteOne({
       title: deleteTitle
