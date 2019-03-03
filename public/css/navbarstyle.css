@@ -27,7 +27,7 @@ body{
   }
 
   .navbar-inverse .navbar-nav>li>a {
-    color: #2c3e50	;
+    color: #fff;
   }
 
     .page-footer {
@@ -36,10 +36,6 @@ body{
     padding-bottom: 20px;
     font-size: 15px;
   }
-
-/* .nav-item{
-  float: right!important;
-} */
 
 .navbar-nav {
     float: right;
@@ -50,6 +46,9 @@ body{
   .navbar-nav {
       margin: 0;
       float: left;
+    }
+    .navbar-inverse .navbar-nav>li>a {
+      color: #2c2e50;
     }
 }
 
@@ -65,9 +64,9 @@ body{
   }
   .nav > li > a{
     font-size: 22px;
-    padding-top: 15px;
-    padding-right: 40px;
-    padding-bottom: 30px;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
   }
 
   #nav-content{

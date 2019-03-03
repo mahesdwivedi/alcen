@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
   <title>Home</title>
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/navbarstyle.css">
@@ -18,9 +19,7 @@
 </head>
 <style>
   .title{
-    font-size: 18px;
-    padding-bottom: 20px;
-    padding-top: 20px;
+    font-size: 20px;
     color: black;
   }
 
@@ -47,8 +46,19 @@
     color:#ffffff;
     padding-left: 10px;
   }
-  #xyz{
-    font-size: 25px!important;
+
+  .item > img{
+    width: 100%;
+    height: 500px;
+  }
+
+  @media only screen and (max-width:768px) {
+    .item > img{
+      width: 100%;
+      height: 100% !important;
+
+    }
+
   }
 
 </style>
@@ -70,19 +80,19 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
           <div class="item active">
-            <img src="images/pic6.jpg" alt="pic" style="width:100%; height:80%;" >
+            <img src="images/pic6.jpg" alt="pic" style="width:100%; height:500px;" >
       </div>
 
             <div class="item">
-              <img src="images/pic7.jpg" alt="pic" style="width:100%;height:80%;">
+              <img src="images/pic7.jpg" alt="pic" style="width:100%;height:500px;">
       </div>
 
               <div class="item">
-                <img src="images/pic10.png" alt="pic" style="width:100%;height:80%;">
+                <img src="images/pic10.png" alt="pic" style="width:100%;height:500px;">
       </div>
 
                 <div class="item">
-                  <img src="images/pic8.jpg" alt="pic" style="width:100%;height:80%;">
+                  <img src="images/pic8.jpg" alt="pic" style="width:100%;height:500px;">
       </div>
 
 
@@ -136,10 +146,8 @@
 
                 <div class="col-lg-3">
                   <br><br><br>
-                  <div id="xyz">
-                    <h4>NEWS EVENTS</h4>
-                  </div>
-                  <div id="MyDivName" class="card-img" style="overflow:hidden; height: 250px;" onmouseover="pauseDiv()" onmouseout="resumeDiv()">
+                    <h4 style="font-family:'Josefin San'!important;">NEWS EVENTS</h4>
+                  <div id="MyDivName" class="card-img" style="overflow:hidden; height: 300px;" onmouseover="pauseDiv()" onmouseout="resumeDiv()">
                     <ul>
                       <% for(var i=(datas.length-1); i>=0; i-- ) { %>
                       <span class="title"><a href="/details/<%= datas[i].title %>"><li><%= datas[i].title %></li></a> </span>

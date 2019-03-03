@@ -51,7 +51,7 @@
 }
 
   .navbar-inverse .navbar-nav>li>a {
-    color: #2c3e50;
+    color: #fff;
   }
 
   .company-logo {
@@ -124,13 +124,20 @@
     .container{
 
     }
-
+    @media only screen and (max-width:768px){
+      .navbar-nav {
+          margin: 0;
+          float: left;
+        }
+        .navbar-inverse .navbar-nav>li>a {
+          color: #2c2e50;
+        }
+    }
     .nav > li > a{
       font-size: 22px;
-      padding-top: 15px;
-      padding-right: 40px;
-      padding-bottom: 30px;
-      color: #fff;
+      padding-top: 10px;
+      padding-right: 20px;
+      padding-bottom: 10px;
     }
 
     #nav-content{
