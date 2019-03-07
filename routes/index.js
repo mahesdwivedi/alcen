@@ -3,8 +3,6 @@ var router = express.Router();
 var flag = false;
 const news = require('../models/notice');
 const career = require('../models/careerSchema');
-// var linkify = require('linkifyjs');
-// require('linkifyjs/plugins/hashtag')(linkify); // optional
 var linkifyHtml = require('linkifyjs/html');
 
 /* GET home page. */
@@ -106,9 +104,6 @@ router.get('/careerdetails/:title', async function(req, res, next) {
     careerTitle: title
   }, 'careerTitle careerBody')
   let fulldata = await career.find({}, 'careerTitle careerBody')
-  // let body = await linkifyHtml(datas.careerBody, {
-  //     defaultProtocol: 'https'
-  // });
   if (session.uniqueID) {
     res.render('careerdetail', {
       "datas": datas[0],
