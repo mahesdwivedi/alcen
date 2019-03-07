@@ -1,8 +1,11 @@
 var express = require('express');
 var router = express.Router();
-var flag=false;
+var flag = false;
 const news = require('../models/notice');
 const career = require('../models/careerSchema');
+// var linkify = require('linkifyjs');
+// require('linkifyjs/plugins/hashtag')(linkify); // optional
+var linkifyHtml = require('linkifyjs/html');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -16,38 +19,38 @@ router.get('/', function(req, res, next) {
   })
 });
 
-router.get('/Achievements',function (req, res , next) {
-        res.render("Achievements");
+router.get('/Achievements', function(req, res, next) {
+  res.render("Achievements");
 })
-router.get('/option',function (req,res,next) {
-    session = req.session;
-    if (session.uniqueID) {
-      res.render('option');
-      console.log(session.uniqueID);
-    } else {
-      {
-        res.render('form');
-      }
+router.get('/option', function(req, res, next) {
+  session = req.session;
+  if (session.uniqueID) {
+    res.render('option');
+    console.log(session.uniqueID);
+  } else {
+    {
+      res.render('form');
     }
-  });
-  router.get('/delete/:title', function(req, res, next) {
+  }
+});
+router.get('/delete/:title', function(req, res, next) {
 
-    var deleteTitle = req.params.title;
-    news.deleteOne({
-      title: deleteTitle
-    }, function(err) {
-      res.redirect('/');
-    });
-    });
-    router.get('/careerdelete/:title', function(req, res, next) {
-      console.log("inside");
-      var deleteTitle = req.params.title;
-      career.deleteOne({
-        careerTitle: deleteTitle
-      }, function(err) {
-        res.redirect('/career');
-      });
-      });
+  var deleteTitle = req.params.title;
+  news.deleteOne({
+    title: deleteTitle
+  }, function(err) {
+    res.redirect('/');
+  });
+});
+router.get('/careerdelete/:title', function(req, res, next) {
+  console.log("inside");
+  var deleteTitle = req.params.title;
+  career.deleteOne({
+    careerTitle: deleteTitle
+  }, function(err) {
+    res.redirect('/career');
+  });
+});
 router.get('/career', function(req, res, next) {
   var query = career.find({})
   query.select('careerTitle careerBody');
@@ -78,35 +81,53 @@ router.get('/project', function(req, res, next) {
 router.get('/details/:title', async function(req, res, next) {
   let session = req.session
   let title = req.params.title
-  let datas = await news.find({title: title}, 'title body')
+  let datas = await news.find({
+    title: title
+  }, 'title body')
   let fulldata = await news.find({}, 'title body')
-  if(session.uniqueID){
+  if (session.uniqueID) {
     res.render('detail', {
-      "datas": datas[0], "fulldata": fulldata , "flag":true
+      "datas": datas[0],
+      "fulldata": fulldata,
+      "flag": true
     })
   } else {
     res.render('detail', {
-      "datas": datas[0], "fulldata": fulldata , "flag":false
+      "datas": datas[0],
+      "fulldata": fulldata,
+      "flag": false
     })
   }
 });
 router.get('/careerdetails/:title', async function(req, res, next) {
-  let session = req.session
+  try {let session = req.session
   let title = req.params.title
-  let datas = await career.find({careerTitle: title}, 'careerTitle careerBody')
+  let datas = await career.find({
+    careerTitle: title
+  }, 'careerTitle careerBody')
   let fulldata = await career.find({}, 'careerTitle careerBody')
-  if(session.uniqueID){
-    res.render('detail', {
-      "datas": datas[0], "fulldata": fulldata , "flag":true
+  // let body = await linkifyHtml(datas.careerBody, {
+  //     defaultProtocol: 'https'
+  // });
+  if (session.uniqueID) {
+    res.render('careerdetail', {
+      "datas": datas[0],
+      "fulldata": fulldata,
+      "flag": true
     })
   } else {
-    res.render('detail', {
-      "datas": datas[0], "fulldata": fulldata , "flag":false
+    res.render('careerdetail', {
+      "datas": datas[0],
+      "fulldata": fulldata,
+      "flag": false
     })
+  }}
+  catch(err) {
+    console.log(err);
   }
 });
 router.get('/login', function(req, res, next) {
-//  var flag = 0;
+  //  var flag = 0;
   res.render('login', {
     title: 'form',
     success: false,
@@ -119,10 +140,9 @@ router.post('/login', function(req, res, next) {
   console.log(req.body);
   if (req.body.email == 'admin@xyz.com' && req.body.pass == 'admin') {
     session.uniqueID = req.body.email;
-    flag=true;
-  }
-  else{
-    flag=false;
+    flag = true;
+  } else {
+    flag = false;
   }
   res.redirect('redirect');
 });
@@ -157,19 +177,19 @@ router.post('/enter', function(req, res) {
     .catch((err) => console.log(err))
 });
 router.get('/addcareer', function(req, res, next) {
-    let session = req.session;
-    if (session.uniqueID) {
-      res.render('careeradd');
-      console.log(session.uniqueID);
-    } else {
-      {
-        res.render('form');
-      }
+  let session = req.session;
+  if (session.uniqueID) {
+    res.render('careeradd');
+    console.log(session.uniqueID);
+  } else {
+    {
+      res.render('form');
     }
-  });
+  }
+});
 router.post('/addcareer', function(req, res) {
   let newCareer = new career(req.body);
-    newCareer.save()
+  newCareer.save()
     .then(res.redirect('/option'))
     .catch((err) => console.log(err))
 });
