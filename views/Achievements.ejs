@@ -60,7 +60,16 @@
       padding-bottom: 20px;
       font-size: 15px;
 
-      width: 100%;
+      /* width: 100%; */
+    }
+    @media only screen and (max-width:768px){
+      .navbar-nav {
+          margin: 0;
+          float: left;
+        }
+        .navbar-inverse .navbar-nav>li>a {
+          color: #2c2e50;
+        }
     }
     .navbar-nav > li > a:hover {
 
@@ -158,8 +167,7 @@
       <button type="button" class="btn btn-secondary design" data-toggle="modal" data-target=".bd-example-modal-xl">
       <img src="images/certificate-s.jpeg" alt="Certificate"><br><h4 style="background-color: white; color: black;">Certificate of Recognition</h4>
     </button>
-<div class="row">
-
+    <div class="row">
       <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl">
           <div class="modal-content">
@@ -183,10 +191,6 @@
           </div>
         </div>
     </footer>
-
-
-
-
 </body>
 
 </html>
