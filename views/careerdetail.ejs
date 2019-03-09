@@ -6,35 +6,34 @@
 
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-  <!-- <link href="css/style.css" rel="stylesheet" type="text/css"> -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="/javascripts/linkify.min.js"></script>
   <script src="/javascripts/linkify-jquery.min.js"></script>
   <style>
-  .card-back{
-    background-color: #eee;
-    border: 1px solid black!important;
-    background: #2c3e50;
-    color: white;
-    padding-left: 60px;
-  }
+    .card-back {
+      background-color: #eee;
+      border: 1px solid black !important;
+      background: #2c3e50;
+      color: white;
+      padding-left: 60px;
+    }
 
-  #MyDivName{
-    background: #eee;
-  }
+    #MyDivName {
+      background: #eee;
+    }
 
-  .title{
-    padding-left: 2px;
-    padding-top: 8px;
-    background-color: inherit;
-  }
+    .title {
+      padding-left: 2px;
+      padding-top: 8px;
+      background-color: inherit;
+    }
 
-  #ab1{
-    background: #2c3e50;
-    color: white;
-  }
+    #ab1 {
+      background: #2c3e50;
+      color: white;
+    }
   </style>
   <meta charset="utf-8">
   <title>
@@ -50,26 +49,26 @@
     <div class="row">
       <div class="col-lg-8">
         <h1 id="ab1" class="card-header" style="font-family:'Josefin Sans'; font-size: 30px;max-width:100%; ">
-        <%= datas.careerTitle %>
-      </h1>
+          <%= datas.careerTitle %>
+        </h1>
         <hr>
         <p style="font-family:'Josefin Sans';">
           <%= datas.careerBody %>
         </p>
         <hr>
-        <a href="/"><button type="button" class="btn btn-dark">Home   </button></a>
+        <a href="/"><button type="button" class="btn btn-dark">Home </button></a>
         <% if(flag) { %>
-        <a href="/careerdelete/<%= datas.careerTitle %>"  id="toglee"><button class="btn btn-dark">Delete</button></a>
+        <a href="/careerdelete/<%= datas.careerTitle %>" id="toglee"><button class="btn btn-dark">Delete</button></a>
         <% } %>
       </div>
-        <div class="col-lg-3">
-          <br><br><br>
-          <div id="xyz" class="">
-            <h3 class="card-back" style="padding-top:8px;">Career</h3>
-            <div id="MyDivName" class="card-img" style="overflow: auto; height: 300px;">
+      <div class="col-lg-3">
+        <br><br><br>
+        <div id="xyz" class="">
+          <h3 class="card-back" style="padding-top:8px;">Career</h3>
+          <div id="MyDivName" class="card-img" style="overflow: auto; height: 300px;">
             <ul>
               <% for(var i=(fulldata.length-1); i>=0; i-- ) { %>
-                <li>
+              <li>
 
                 <span class="title">
                   <a href="/careerdetails/<%= fulldata[i].careerTitle %>"><%= fulldata[i].careerTitle %></a>
@@ -78,15 +77,15 @@
               <% } %>
             </ul>
           </div>
-          </div>
         </div>
       </div>
+    </div>
   </div>
   <script>
-  $('p').linkify();
-$('#sidebar').linkify({
-  target: "_blank"
-});
+    $('p').linkify();
+    $('#sidebar').linkify({
+      target: "_blank"
+    });
   </script>
 </body>
 

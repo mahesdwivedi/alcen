@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
 <head>
   <meta charset="utf-8">
   <title>About Us</title>
@@ -15,139 +14,112 @@
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
-  <style>
-  body{
-
+<style>
+  body {
     background-image: url(https://cratewholesale.com/wp-content/uploads/2012/05/light-green-background-2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     overflow-x: hidden;
-
-
   }
-  .tagline{
+  .tagline {
     /* padding-left: 180px; */
-    color:white;
+    color: white;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 17px;
   }
-    .navbar-inverse {
-      background: #2c3e50;
-      color: white;
-    }
-    .navbar-inverse .navbar-brand, .navbar-inverse a{
-      color:white;
+  .navbar-inverse {
+    background: #2c3e50;
+    color: white;
+  }
+  .navbar-inverse .navbar-brand,
+  .navbar-inverse a {
+    color: white;
+  }
+  .navbar-inverse .navbar-nav>li>a {
+    color: #fff;
+  }
+  .navbar {
+    border: none;
+    border-radius: none;
+  }
+  .company-logo {
+    background-color: #edffb3;
+  }
+  .navbar-nav {
+    float: right;
+    margin: 0;
+  }
+  .page-footer {
+    background-color: #2c3e50;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-size: 15px;
+  }
+  .navbar-nav>li>a:hover {
+    color: #008e00 !important;
+    background-color: #d6e3c5 !important;
+  }
+  #company-name {
+    font-size: 25px;
+    color: #edffb3;
+    padding-left: 10px;
+  }
+  p {
+    font-size: 20px;
+  }
+  @media only screen and (max-width:768px) {
+    .navbar-nav {
+      margin: 0;
+      float: left;
     }
     .navbar-inverse .navbar-nav>li>a {
-      color: #fff;
+      color: #2c2e50;
     }
-    .navbar{
-      border: none;
-      border-radius: none;
-    }
-
-    .company-logo {
-      background-color: #edffb3;
-    }
-    .navbar-nav {
-        float: right;
-        margin: 0;
-    }
-
-    .page-footer{
-      background-color: #2c3e50;
-      padding-top: 10px;
-      padding-bottom: 20px;
-      font-size: 15px;
-    }
-    .navbar-nav > li > a:hover {
-
-      color: #008e00!important;
-      background-color: #d6e3c5!important;
-
   }
-
-    #company-name{
-      font-size:25px;
-      color:#edffb3;
-      padding-left: 10px;
-    }
-
-    p{
-      font-size: 20px;
-    }
-    @media only screen and (max-width:768px){
-      .navbar-nav {
-          margin: 0;
-          float: left;
-        }
-        .navbar-inverse .navbar-nav>li>a {
-          color: #2c2e50;
-        }
-    }
-
-    #xyz{
-      background: #2c3e50;
-      color: #ffffff;
-      padding-top: 5px;
-      padding-bottom: 5px;
-      padding-left: 70px;
-    }
-
-    #company-name{
-      font-size:25px;
-      color:#edffb3;
-      padding-left: 10px;
-    }
-
-    #footer-text{
-      color:#ffffff;
-      padding-left: 10px;
-    }
-
-    .card-img{
-      background: #eee;
-    }
-
-    .jumbotron {
-      color: #fff;
-      background: linear-gradient(#75777a,#2c3e50);
-    }
-    .fullCard{
-      background: #eee;
-    }
-    .nav > li > a{
-      font-size: 22px;
-      padding-top: 10px;
-      padding-right: 10px;
-      padding-bottom: 10px;
-    }
-
-    #nav-content{
-      padding-top: 20px;
-
-    }
-
-
-
-
-  </style>
-
-
-
+  #xyz {
+    background: #2c3e50;
+    color: #ffffff;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 70px;
+  }
+  #company-name {
+    font-size: 25px;
+    color: #edffb3;
+    padding-left: 10px;
+  }
+  #footer-text {
+    color: #ffffff;
+    padding-left: 10px;
+  }
+  .card-img {
+    background: #eee;
+  }
+  .jumbotron {
+    color: #fff;
+    background: linear-gradient(#75777a, #2c3e50);
+  }
+  .fullCard {
+    background: #eee;
+  }
+  .nav>li>a {
+    font-size: 22px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+  }
+  #nav-content {
+    padding-top: 20px;
+  }
+</style>
 <body>
   <%- include('navbar') %>
-
   <div class="container-fluid">
-
     <div class="jumbotron">
       <h1><i class="fa fa-info-circle"></i> About Us </h1>
-
-
     </div>
     <div class="row">
       <div class="col-lg-1">
-
       </div>
       <div class="col-lg-7 col-xs-12 col-sm-12">
         <h1 id="ab1" style="font-family:'Josefin Sans'; font-size: 30px;max-width:100%; ">
@@ -160,9 +132,9 @@
           from an
           electricity transmission grid, thereby providing energy security however, for sustainability, initiatives must be taken to make solar technology cost competitive with coal</p>
         <h1 id="ab2" style="font-family:'Josefin Sans'; font-size: 30px;max-width:100%; ">
-            WHY INVEST IN SOLAR POWER?
-          </h1>
-          <hr>
+          WHY INVEST IN SOLAR POWER?
+        </h1>
+        <hr>
         <p style="font-family:'Josefin Sans';">
           There are many reasons for installing solar power systems. Investing in Solar PV energy
           systems not only reduces carbon dioxide emission, but is also a secure investment with
@@ -170,17 +142,17 @@
           access to a clean and competent alternative, efficient energy solution, with reduced
           carbon footprints.</p>
         <h1 id="ab3" style="font-family:'Josefin Sans'; font-size: 30px;max-width:100%; ">
-              ALCEN: A ONE-STOP SOLAR ENERGY SUPPLIER
-            </h1>
-            <hr>
+          ALCEN: A ONE-STOP SOLAR ENERGY SUPPLIER
+        </h1>
+        <hr>
         <p style="font-family:'Josefin Sans';">
           Cooperating successfully with our customers and the Sun ,for the last few years, we
           have been pioneers in solar power engineering from 2014. More than three successful
           years in solar power engineering.</p>
         <h1 id="ab4" style="font-family:'Josefin Sans'; font-size: 30px;max-width:100%; ">
-                COMBINING INNOVATION,EXPERIENCE AND RELIABILITY
-              </h1>
-              <hr>
+          COMBINING INNOVATION,EXPERIENCE AND RELIABILITY
+        </h1>
+        <hr>
         <p style="font-family:'Josefin Sans';">
           As suppliers of solar installations and ecological energy technology products, we deliver
           integrated sustainable alcen solutions for private and commercial as well as the public
@@ -195,9 +167,9 @@
           deliver precise and value-driven performance to all our clients, quality consciousness
           and frictionless cooperation constitutes quality ethos</p>
         <h1 id="ab5" style="font-family:'Josefin Sans'; font-size: 30px;max-width:100%; ">
-                  ADVANTAGES OF USING ALCEN TECHNOLOGY AS A SERVICE OFFERING
-                </h1>
-                <hr>
+          ADVANTAGES OF USING ALCEN TECHNOLOGY AS A SERVICE OFFERING
+        </h1>
+        <hr>
         <p>
           <ul style="font-family:'Josefin Sans'; font-size:20px;">
             <li>Our vision, cost benefit approach, help us to deliver world class solutions to our customers, with a high degree of innovation, reliability.</li>
@@ -205,8 +177,7 @@
             <li> We provide solar based cost effective solar water pumping solution for the agricultural sector</li>
             <li> We provide sustainable energy support for educational and other institution both public and private</li>
           </ul>
-          </p>
-
+        </p>
       </div>
       <div class="col-lg-3 col-xs-10 col-sm-10 container">
         <div class="fullCard" id="thumbnail">
@@ -216,30 +187,30 @@
               <hr>
             </div>
             <div class="cardLinks" style="padding-left:5px; font-family:'Josefin Sans';">
-                <a href="#ab1"  class="links">  <i class="fab fa-google-play"></i>TRANSFORMING LIVES THROUGH SOLAR ENERGY</a><br><br></li>
-                <a href="#ab2"   class="links">  <i class="fab fa-google-play"></i>WHY INVEST IN SOLAR POWER?</a><br><br></li>
-                <a href="#ab3"   class="links">  <i class="fab fa-google-play"></i>ALCEN: A ONE-STOP SOLAR ENERGY SUPPLIER</a><br><br></li>
-                <a href="#ab4"   class="links">  <i class="fab fa-google-play"></i>COMBINING INNOVATION,EXPERIENCE AND RELIABILITY</a><br><br></li>
-                <a href="#ab5"   class="links">  <i class="fab fa-google-play"></i>WHY US?</a></li>
+              <a href="#ab1" class="links"> <i class="fab fa-google-play"></i>TRANSFORMING LIVES THROUGH SOLAR ENERGY</a><br><br></li>
+              <a href="#ab2" class="links"> <i class="fab fa-google-play"></i>WHY INVEST IN SOLAR POWER?</a><br><br></li>
+              <a href="#ab3" class="links"> <i class="fab fa-google-play"></i>ALCEN: A ONE-STOP SOLAR ENERGY SUPPLIER</a><br><br></li>
+              <a href="#ab4" class="links"> <i class="fab fa-google-play"></i>COMBINING INNOVATION,EXPERIENCE AND RELIABILITY</a><br><br></li>
+              <a href="#ab5" class="links"> <i class="fab fa-google-play"></i>WHY US?</a></li>
             </div>
           </div>
         </div>
       </div>
       <div class="col-lg-1">
-
       </div>
     </div>
   </div>
   <br><br>
   <footer id="bottom" class="page-footer">
-      <div class="row">
-        <div class="col-lg-6">
-          <p id="company-name">Alcen Technologies Private Limited<br><span class="tagline">technologies you can rely on..</p>
-        </div>
-        <div class="col-lg-6">
-          <p id="footer-text">Plot No.- 24/1/A, Chandaka industial Estate,Near NIFT Building,KIIT Campus,BHUBANESWAR-751024. ,Odisha<br>Tel.:+91 674 2552984 2552985, Fax: +91 674 2552986<br>Email: alcentechnologies@gmail.com<br><a href="/login"><i class="fas fa-user" style="color:white;">Admin Login</i><a></p>
-        </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <p id="company-name">Alcen Technologies Private Limited<br><span class="tagline">technologies you can rely on..</p>
       </div>
+      <div class="col-lg-6">
+        <p id="footer-text">Plot No.- 24/1/A, Chandaka industial Estate,Near NIFT Building,KIIT Campus,BHUBANESWAR-751024. ,Odisha<br>Tel.:+91 674 2552984 2552985, Fax: +91 674 2552986<br>Email: alcentechnologies@gmail.com<br><a href="/login"><i
+              class="fas fa-user" style="color:white;">Admin Login</i><a></p>
+      </div>
+    </div>
   </footer>
 
 

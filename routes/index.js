@@ -10,7 +10,6 @@ router.get('/', function(req, res, next) {
   var query = news.find({})
   query.select('title body');
   query.exec((err, data) => {
-    //console.log(data);
     res.render('index', {
       "datas": data
     });
@@ -24,7 +23,6 @@ router.get('/option', function(req, res, next) {
   session = req.session;
   if (session.uniqueID) {
     res.render('option');
-    console.log(session.uniqueID);
   } else {
     {
       res.render('form');
@@ -41,7 +39,6 @@ router.get('/delete/:title', function(req, res, next) {
   });
 });
 router.get('/careerdelete/:title', function(req, res, next) {
-  console.log("inside");
   var deleteTitle = req.params.title;
   career.deleteOne({
     careerTitle: deleteTitle
@@ -53,7 +50,6 @@ router.get('/career', function(req, res, next) {
   var query = career.find({})
   query.select('careerTitle careerBody');
   query.exec((err, data) => {
-    // console.log(data);
     res.render('career', {
       "datas": data
     });
@@ -98,26 +94,27 @@ router.get('/details/:title', async function(req, res, next) {
   }
 });
 router.get('/careerdetails/:title', async function(req, res, next) {
-  try {let session = req.session
-  let title = req.params.title
-  let datas = await career.find({
-    careerTitle: title
-  }, 'careerTitle careerBody')
-  let fulldata = await career.find({}, 'careerTitle careerBody')
-  if (session.uniqueID) {
-    res.render('careerdetail', {
-      "datas": datas[0],
-      "fulldata": fulldata,
-      "flag": true
-    })
-  } else {
-    res.render('careerdetail', {
-      "datas": datas[0],
-      "fulldata": fulldata,
-      "flag": false
-    })
-  }}
-  catch(err) {
+  try {
+    let session = req.session
+    let title = req.params.title
+    let datas = await career.find({
+      careerTitle: title
+    }, 'careerTitle careerBody')
+    let fulldata = await career.find({}, 'careerTitle careerBody')
+    if (session.uniqueID) {
+      res.render('careerdetail', {
+        "datas": datas[0],
+        "fulldata": fulldata,
+        "flag": true
+      })
+    } else {
+      res.render('careerdetail', {
+        "datas": datas[0],
+        "fulldata": fulldata,
+        "flag": false
+      })
+    }
+  } catch (err) {
     console.log(err);
   }
 });
@@ -132,7 +129,6 @@ router.get('/login', function(req, res, next) {
 });
 router.post('/login', function(req, res, next) {
   let session = req.session;
-  console.log(req.body);
   if (req.body.email == 'admin@xyz.com' && req.body.pass == 'admin') {
     session.uniqueID = req.body.email;
     flag = true;
@@ -145,7 +141,6 @@ router.get('/redirect', function(req, res, next) {
   let session = req.session;
   if (session.uniqueID) {
     res.redirect('option');
-    console.log(session.uniqueID);
   } else {
     {
       res.render('form');
@@ -156,7 +151,6 @@ router.get('/addnews', function(req, res, next) {
   let session = req.session;
   if (session.uniqueID) {
     res.render('add');
-    console.log(session.uniqueID);
   } else {
     {
       res.render('form');
@@ -164,9 +158,7 @@ router.get('/addnews', function(req, res, next) {
   }
 });
 router.post('/enter', function(req, res) {
-  //console.log(req.body);
   let latestnews = new news(req.body);
-  // console.log(latestnews);
   latestnews.save()
     .then(res.redirect('/option'))
     .catch((err) => console.log(err))
@@ -175,7 +167,6 @@ router.get('/addcareer', function(req, res, next) {
   let session = req.session;
   if (session.uniqueID) {
     res.render('careeradd');
-    console.log(session.uniqueID);
   } else {
     {
       res.render('form');

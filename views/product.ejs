@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Our Products</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Our Products</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-  </head>
-  <style>
-  .tagline{
-    /* padding-left: 180px; */
-    color:white;
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+
+</head>
+<style>
+  .tagline {
+    color: white;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 17px;
   }
-  body{
+
+  body {
 
     background-image: url(https://cratewholesale.com/wp-content/uploads/2012/05/light-green-background-2.jpg);
     background-size: cover;
@@ -29,18 +30,22 @@
 
 
   }
+
   .navbar-nav {
-      float: right;
-      margin: 0;
+    float: right;
+    margin: 0;
   }
+
   .jumbotron {
     color: #fff;
-    background: linear-gradient(#75777a,#2c3e50);
+    background: linear-gradient(#75777a, #2c3e50);
   }
-  .navbar{
+
+  .navbar {
     border: none;
     border-radius: none;
   }
+
   .navbar-inverse {
     background: #2c3e50;
     color: white;
@@ -50,11 +55,13 @@
   .navbar-inverse a {
     color: black;
   }
-  .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+
+  .navbar-inverse .navbar-collapse,
+  .navbar-inverse .navbar-form {
 
     border: 0px;
 
-}
+  }
 
   .navbar-inverse .navbar-nav>li>a {
     color: #fff;
@@ -70,23 +77,25 @@
     padding-bottom: 20px;
     font-size: 15px;
   }
-  .navbar-nav > li > a:hover {
 
-    color: #008e00!important;
-    background-color: #d6e3c5!important;
+  .navbar-nav>li>a:hover {
 
-}
+    color: #008e00 !important;
+    background-color: #d6e3c5 !important;
 
-#company-name{
-  font-size:25px;
-  color:#edffb3;
-  padding-left: 10px;
-}
+  }
 
-#footer-text{
-  color:#ffffff;
-  padding-left: 10px;
-}
+  #company-name {
+    font-size: 25px;
+    color: #edffb3;
+    padding-left: 10px;
+  }
+
+  #footer-text {
+    color: #ffffff;
+    padding-left: 10px;
+  }
+
   .dropdown-menu {
     background: #293e50;
   }
@@ -94,121 +103,140 @@
   .dropdown-menu>li>a {
     color: #ffffff;
   }
-    #xyz{
-      background: #2c3e50;
-      color: #ffffff;
-      padding-top: 5px;
-      padding-bottom: 5px;
-      padding-left: 70px;
-    }
 
-    .w3-container{
-      /* border: 1px solid grey; */
+  #xyz {
+    background: #2c3e50;
+    color: #ffffff;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 70px;
+  }
+
+  .w3-container {
       background: #ecf0f1;
-      color: #2c3e50;
-      padding-left: 3px;
-      padding-bottom: 15px;
-      box-shadow: 5px 10px #2c2e50;
+    color: #2c3e50;
+    padding-left: 3px;
+    padding-bottom: 15px;
+    box-shadow: 5px 10px #2c2e50;
+  }
+
+  .w3-container>a {
+    color: #2c3e50;
+    font-family: 'Josefin Sans';
+  }
+
+  p {
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+
+  .container {}
+
+  @media only screen and (max-width:768px) {
+    .navbar-nav {
+      margin: 0;
+      float: left;
     }
 
-    .w3-container>a{
-      color: #2c3e50;
-      font-family: 'Josefin Sans';
+    .navbar-inverse .navbar-nav>li>a {
+      color: #2c2e50;
     }
+  }
 
-    p{
-      font-size: 20px;
-      font-family: 'Josefin Sans', sans-serif;
-    }
+  .nav>li>a {
+    font-size: 22px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+  }
 
-    .container{
+  #nav-content {
+    padding-top: 20px;
 
-    }
-    @media only screen and (max-width:768px){
-      .navbar-nav {
-          margin: 0;
-          float: left;
-        }
-        .navbar-inverse .navbar-nav>li>a {
-          color: #2c2e50;
-        }
-    }
-    .nav > li > a{
-      font-size: 22px;
-      padding-top: 10px;
-      padding-right: 10px;
-      padding-bottom: 10px;
-    }
+  }
+</style>
 
-    #nav-content{
-      padding-top: 20px;
-
-    }
-  </style>
-
-  <body>
-<%- include('navbar') %>
-    <div class="container-fluid">
-      <div class="jumbotron">
-        <h1><i class="fa fa-briefcase"></i> Our Products </h1>
+<body>
+  <%- include('navbar') %>
+  <div class="container-fluid">
+    <div class="jumbotron">
+      <h1><i class="fa fa-briefcase"></i> Our Products </h1>
+    </div>
+    <div class="row">
+      <div class="col-lg-1 col-sm-12 col-xs-12">
       </div>
-      <div class="row">
-        <div class="col-lg-1 col-sm-12 col-xs-12">
+      <div class="col-lg-7 col-sm-12 col-xs-12">
+        <h3 id="p1"><b>CONCENTRATED SOLAR THERMAL SYSTEM</b></h3>
+        <hr>
+        <p>CST power plants (often referred to as CSP) produce heat from sunlight, which is subsequently converted into electricity. A number of technologies have been developed to concentrate and collect sunlight. The collected sunlight creates
+          heat, which in turn is used to drive a turbine and generator as in a conventional power station.</p><br><br>
+
+        <h3 id="p2"><b>SOLAR HOME LIGHTING SYSTEM (SHLS)</b></h3>
+        <hr>
+        <p>The solar home lighting system is an excellent solution for domestic lighting (DC) in rural/urban areas and especially in remote areas whice are inaccessible by the power grid. A typical solar home lighting system comprises of solar PV
+          module, battery (LMLA/VRLA), charge controller connected in a sequence to provide power to domestic load (like luminaries, protable TV, redio, DC fan etc.) the battery and module ratings are selectable as per the load requirement. The
+          systems are designed typically to give a daily working time of 3-4 hours. The system is tested as per MNRE technical requirements/standards.</p><br><br>
+
+        <h3 id="p3"><b>SOLAR STREET LIGHTING SYSTEM (SSLS)</b></h3>
+        <hr>
+        <p>The solar street lighting system caters to needbased street lighting and outdoor/garden lighting. It gives 10-12 hours of continuous, bright, cooler light, with automatic dusk to down controls. A typical SSLS comprises of a CFL/LED
+          luminary light source, battery (LMLA/VRLA) for storage of electricity, PV module for charging the battery, charge controller for safe charging and discharging of battery and dusk-to-dawn controls for operating the lamp. The system is tested
+          as per MNRE technical requirements/standards.</p><br><br>
+
+        <h3 id="p4"><b>DIGITAL DC ENERGY METER</b></h3>
+        <hr>
+        <p>The DC energy meter is a dual channel DC multifunction meter for measurement of DC energy, from SPV applications. It measures DC electrical parameters like voltage, ampere, ampere-hour (Ah) and kilowatt-hour (kWh). The battery charging and
+          discharging para meters can be monitored by using this meter. This instrument has an optional RS 485 output port for RM interface.</p><br><br>
+
+        <h3 id="p5"><b>REMOTE MONITORING & DIAGONISTIC SYSTEM (RMS)</b></h3>
+        <hr>
+        <p>Primarily developed to monitor the performance of a Solar PV Power Plant (SPP)of any size, to maximize solar power harvesting and reduce maintenance cost and time, for analysis of the plant performance data. It also has the capability to
+          transfer the logged data to Agni’s server for remote monitoring purpose. Generally Agni provides a user ID and a password to the intended customer for monitoring purpose. Customer can monitor their SPP remotely with the help of a monitoring
+          web-portal, with the supplied ID and password, using any standard web-browser like Mozilla, firefox, google chrome.Agni will maintain the server, reducing the customer’s effort to maintain the same.</p><br><br>
+
+        <h3 id="p6"><b>HYBRID SOLAR INVERTER (HSI)</b></h3>
+        <hr>
+        <p>The HSI is a uniquely featured solar inverter which provides single phase or three phase 230 AC power to connected load. It works with battery or without battery-connected conditions and also supports the connected grid, to cater to the
+          load. Power generated form Solar PV is fully utilized to either charge the battery or to cater to the load, in conjuction with the grid. This system also has the capability to run the load directly form Solar PV, in absence of geid and
+          battery, within the limits of PV power.</p><br><br>
+
+      </div>
+      <div class="col-lg-3 col-sm-12 col-xs-12">
+        <br><br><br>
+        <div id="xyz">
+          <h4 style="text-align: center; padding-right: 60px; font-family:'Josefin Sans'; font-size: 20px;">RELATED LINKS</h4>
         </div>
-        <div class="col-lg-7 col-sm-12 col-xs-12">
-          <h3 id="p1"><b>CONCENTRATED SOLAR THERMAL SYSTEM</b></h3><hr>
-          <p>CST power plants (often referred to as CSP) produce heat from sunlight, which is subsequently converted into electricity. A number of technologies have been developed to concentrate and collect sunlight. The collected sunlight creates heat, which in turn is used to drive a turbine and generator as in a conventional power station.</p><br><br>
+        <div class="w3-container">
 
-          <h3 id="p2"><b>SOLAR  HOME  LIGHTING  SYSTEM (SHLS)</b></h3><hr>
-          <p>The solar home lighting system is an excellent  solution for domestic lighting  (DC) in rural/urban  areas  and especially in remote areas whice are inaccessible by the power grid. A typical solar home lighting system comprises of solar PV module, battery (LMLA/VRLA), charge controller connected in a sequence to provide power to domestic load (like luminaries, protable TV, redio, DC fan etc.) the battery and module ratings are selectable as per the load requirement. The systems are designed typically to give a daily working time of 3-4 hours. The system is tested as per MNRE technical requirements/standards.</p><br><br>
-
-          <h3 id="p3"><b>SOLAR STREET LIGHTING SYSTEM (SSLS)</b></h3><hr>
-          <p>The solar street lighting system caters to needbased street lighting and outdoor/garden lighting. It gives 10-12 hours of continuous, bright, cooler light, with automatic dusk to down controls. A typical SSLS comprises of a CFL/LED luminary light source, battery (LMLA/VRLA) for storage of electricity, PV module for charging the battery, charge controller for safe charging and discharging  of battery and dusk-to-dawn controls for operating the lamp. The system is tested as per MNRE technical  requirements/standards.</p><br><br>
-
-          <h3 id="p4"><b>DIGITAL DC ENERGY METER</b></h3><hr>
-          <p>The DC energy meter is a dual channel DC multifunction  meter for measurement of DC energy, from SPV applications. It measures DC electrical parameters like voltage, ampere, ampere-hour (Ah) and kilowatt-hour (kWh). The battery charging and discharging para meters can be monitored by using this meter. This instrument has an optional RS 485 output port for RM  interface.</p><br><br>
-
-          <h3 id="p5"><b>REMOTE MONITORING  & DIAGONISTIC SYSTEM (RMS)</b></h3><hr>
-          <p>Primarily developed to monitor the performance of a Solar PV Power Plant (SPP)of any size, to maximize solar power harvesting and reduce maintenance cost and time, for analysis of the plant performance data. It also has the capability to transfer the logged data to Agni’s server for remote monitoring purpose. Generally Agni provides a user ID and a password to the intended customer for monitoring purpose. Customer can monitor their SPP remotely with the help of a monitoring web-portal, with the supplied ID and password, using any standard web-browser like Mozilla, firefox, google chrome.Agni will maintain the server, reducing the customer’s effort to maintain the same.</p><br><br>
-
-          <h3 id="p6"><b>HYBRID SOLAR INVERTER (HSI)</b></h3><hr>
-          <p>The HSI is a uniquely featured solar inverter which provides single phase or three phase 230 AC power to connected load. It works with battery or without battery-connected conditions and also supports the connected grid, to cater to the load. Power generated form Solar PV is fully utilized to either charge the battery or to cater to the load, in conjuction with the grid. This system also has the capability to run the load directly form Solar PV, in absence of geid and battery, within the limits of PV power.</p><br><br>
-
-          </div>
-        <div class="col-lg-3 col-sm-12 col-xs-12">
-          <br><br><br>
-          <div id="xyz">
-            <h4 style="text-align: center; padding-right: 60px; font-family:'Josefin Sans'; font-size: 20px;">RELATED LINKS</h4>
-          </div>
-          <div class="w3-container">
-
-            <br>
-            <ul>
-              <li><a href="#p1"><b>CONCENTRATED SOLAR THERMAL</b></a><br><br></li>
-              <li><a href="#p2"><b>SOLAR HOME LIGHTING SYSTEM</b></a><br><br></li>
-              <li><a href="#p3"><b>SOLAR STREET LIGHTING SYSTEM</b></a><br><br></li>
-              <li><a href="#p4"><b>DIGITAL DC ENERGY METER<b></a><br><br></li>
-              <li><a href="#p5"><b>REMOTE MONITORING & DIAGONISTIC SYSTEM<b></a><br><br></li>
-              <li><a href="#p6"><b>HYBRID SOLAR INVERTER<b></a><br><br></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-1 col-sm-12 col-xs-12">
+          <br>
+          <ul>
+            <li><a href="#p1"><b>CONCENTRATED SOLAR THERMAL</b></a><br><br></li>
+            <li><a href="#p2"><b>SOLAR HOME LIGHTING SYSTEM</b></a><br><br></li>
+            <li><a href="#p3"><b>SOLAR STREET LIGHTING SYSTEM</b></a><br><br></li>
+            <li><a href="#p4"><b>DIGITAL DC ENERGY METER<b></a><br><br></li>
+            <li><a href="#p5"><b>REMOTE MONITORING & DIAGONISTIC SYSTEM<b></a><br><br></li>
+            <li><a href="#p6"><b>HYBRID SOLAR INVERTER<b></a><br><br></li>
+          </ul>
         </div>
       </div>
+      <div class="col-lg-1 col-sm-12 col-xs-12">
       </div>
-      <br><br>
-      <footer id="bottom" class="page-footer">
-          <div class="row">
-            <div class="col-lg-6">
-              <p id="company-name">Alcen Technologies Private Limited<br><span class="tagline">technologies you can rely on..</p>
-            </div>
-            <div class="col-lg-6">
-              <p id="footer-text">Plot No.- 24/1/A, Chandaka industial Estate,Near NIFT Building,KIIT Campus,BHUBANESWAR-751024. ,Odisha<br>Tel.:+91 674 2552984 2552985, Fax: +91 674 2552986<br>Email: alcentechnologies@gmail.com<br><a href="/login"><i class="fas fa-user" style="color:white;">Admin Login</i><a></p>
-            </div>
-          </div>
-      </footer>
+    </div>
+  </div>
+  <br><br>
+  <footer id="bottom" class="page-footer">
+    <div class="row">
+      <div class="col-lg-6">
+        <p id="company-name">Alcen Technologies Private Limited<br><span class="tagline">technologies you can rely on..</p>
+      </div>
+      <div class="col-lg-6">
+        <p id="footer-text">Plot No.- 24/1/A, Chandaka industial Estate,Near NIFT Building,KIIT Campus,BHUBANESWAR-751024. ,Odisha<br>Tel.:+91 674 2552984 2552985, Fax: +91 674 2552986<br>Email: alcentechnologies@gmail.com<br><a href="/login"><i
+              class="fas fa-user" style="color:white;">Admin Login</i><a></p>
+      </div>
+    </div>
+  </footer>
 
-  </body>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
 </html>

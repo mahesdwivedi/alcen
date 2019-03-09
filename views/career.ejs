@@ -14,147 +14,149 @@
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
-  <style>
-  .tagline{
-    /* padding-left: 180px; */
-    color:white;
+<style>
+  .tagline {
+    color: white;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 17px;
   }
-  body{
+
+  body {
 
     background-image: url(https://cratewholesale.com/wp-content/uploads/2012/05/light-green-background-2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     overflow-x: hidden;
-    font-size: 20px!important;
-
-
+    font-size: 20px !important;
   }
+
   .navbar-nav {
-      float: right;
+    float: right;
+    margin: 0;
+  }
+
+  .navbar-inverse {
+    background: #2c3e50;
+    color: white;
+  }
+
+  .navbar-inverse .navbar-brand,
+  .navbar-inverse a {
+    color: white;
+  }
+
+  .navbar-inverse .navbar-nav>li>a {
+    color: #fff;
+  }
+
+  .navbar {
+    border: none;
+    border-radius: none;
+  }
+
+  .company-logo {
+    background-color: #edffb3;
+  }
+
+  .page-footer {
+    background-color: #2c3e50;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-size: 15px;
+  }
+
+  .navbar-nav>li>a:hover {
+
+    color: #008e00 !important;
+    background-color: #d6e3c5 !important;
+
+  }
+
+  #company-name {
+    font-size: 25px;
+    color: #edffb3
+  }
+
+  .dropdown-menu {
+    background: #293e50;
+  }
+
+  .dropdown-menu>li>a {
+    color: #ffffff;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  #xyz {
+    background: #2c3e50;
+    color: #ffffff;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 70px;
+  }
+
+  #company-name {
+    font-size: 25px;
+    color: #edffb3;
+    padding-left: 10px;
+  }
+
+  #footer-text {
+    color: #ffffff;
+    padding-left: 10px;
+  }
+
+  .card-img {
+    background: #eee;
+  }
+
+  .jumbotron {
+    color: #fff;
+    background: linear-gradient(#75777a, #2c3e50);
+  }
+
+  .fullCard {
+    background: #eee;
+  }
+
+  .nav>li>a {
+    font-size: 22px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+  }
+
+  #nav-content {
+    padding-top: 20px;
+
+  }
+
+  @media only screen and (max-width:768px) {
+    .navbar-nav {
       margin: 0;
-  }
-    .navbar-inverse {
-      background: #2c3e50;
-      color: white;
+      float: left;
     }
-    .navbar-inverse .navbar-brand, .navbar-inverse a{
-      color:white;
-    }
+
     .navbar-inverse .navbar-nav>li>a {
-      color: #fff;
+      color: #2c2e50;
     }
-    .navbar{
-      border: none;
-      border-radius: none;
-    }
-
-    .company-logo {
-      background-color: #edffb3;
-    }
-
-    .page-footer{
-      background-color: #2c3e50;
-      padding-top: 10px;
-      padding-bottom: 20px;
-      font-size: 15px;
-    }
-    .navbar-nav > li > a:hover {
-
-      color: #008e00!important;
-      background-color: #d6e3c5!important;
-
   }
-
-    #company-name{
-      font-size:25px;
-      color:#edffb3
-    }
-
-		.dropdown-menu{
-			background: #293e50;
-		}
-
-		.dropdown-menu>li>a{
-			color: #ffffff;
-		}
-
-    p{
-      font-size: 20px;
-    }
-
-    #xyz{
-      background: #2c3e50;
-      color: #ffffff;
-      padding-top: 5px;
-      padding-bottom: 5px;
-      padding-left: 70px;
-    }
-
-    #company-name{
-      font-size:25px;
-      color:#edffb3;
-      padding-left: 10px;
-    }
-
-    #footer-text{
-      color:#ffffff;
-      padding-left: 10px;
-    }
-
-    .card-img{
-      background: #eee;
-    }
-
-    .jumbotron {
-      color: #fff;
-      background: linear-gradient(#75777a,#2c3e50);
-    }
-    .fullCard{
-      background: #eee;
-    }
-    .nav > li > a{
-      font-size: 22px;
-      padding-top: 10px;
-      padding-right: 10px;
-      padding-bottom: 10px;
-    }
-
-    #nav-content{
-      padding-top: 20px;
-
-    }
-    @media only screen and (max-width:768px){
-      .navbar-nav {
-          margin: 0;
-          float: left;
-        }
-        .navbar-inverse .navbar-nav>li>a {
-          color: #2c2e50;
-        }
-    }
-
-
-
-
-  </style>
+</style>
 
 
 
 <body>
-<%- include('navbar') %>
+  <%- include('navbar') %>
 
   <div class="container-fluid">
 
     <div class="jumbotron">
       <h1><i class="fa fa-info-circle"></i> Career </h1>
-
-
     </div>
     <div class="row">
       <div class="col-lg-1">
-
       </div>
       <div class="col-lg-7 col-xs-12 col-sm-12">
         <h1 id="ab1" style="font-family:'Josefin Sans'; font-size: 30px;max-width:100%; ">
@@ -162,9 +164,12 @@
           <hr>
         </h1>
         <p style="font-family:'Josefin Sans';">
-          ALCEN Technology has the vision to be an exemplary leader in the field of Training & Development by creating an environment where the skill development of trainees takes place in a very open and friendly manner. We always strive to find out innovative ways of training and Development in the ever advancing power sector. Our curriculum and teaching methodology reinforce the basic knowledge that the students carry after passing out from the engineering schools and colleges to a level of applied knowledge, required in the power sector. The Institute also extends its training facility for the working professionals in existing power sector to make them abreast with advanced technology and power management.<br>
+          ALCEN Technology has the vision to be an exemplary leader in the field of Training & Development by creating an environment where the skill development of trainees takes place in a very open and friendly manner. We always strive to find out
+          innovative ways of training and Development in the ever advancing power sector. Our curriculum and teaching methodology reinforce the basic knowledge that the students carry after passing out from the engineering schools and colleges to a
+          level of applied knowledge, required in the power sector. The Institute also extends its training facility for the working professionals in existing power sector to make them abreast with advanced technology and power management.<br>
 
-          The Institute is blessed with a team of highly qualified personalities as our faculty to train, mentor the trainees in different systems of power sector. The vast experience of faculties ranging from erection and commissioning of power plants to electricity regulatory affairs provides a holistic training approach to the trainee.<br>
+          The Institute is blessed with a team of highly qualified personalities as our faculty to train, mentor the trainees in different systems of power sector. The vast experience of faculties ranging from erection and commissioning of power
+          plants to electricity regulatory affairs provides a holistic training approach to the trainee.<br>
 
           We at ALCEN Technology understand the necessity of "Training the Trainers" in order to create an updated intellectual resource for knowledge sharing.
           The faculties attend regular conferences, seminars to update their knowledge in the industry. Also, the faculties work very closely with the industry for understanding and resolving their problems
@@ -189,17 +194,18 @@
       </div>
     </div>
   </div>
-    <br><br>
-    <footer id="bottom" class="page-footer">
-        <div class="row">
-          <div class="col-lg-6">
-            <p id="company-name">Alcen Technologies Private Limited<br><span class="tagline">technologies you can rely on..</p>
-          </div>
-          <div class="col-lg-6">
-            <p id="footer-text">Plot No.- 24/1/A, Chandaka industial Estate,Near NIFT Building,KIIT Campus,BHUBANESWAR-751024. ,Odisha<br>Tel.:+91 674 2552984 2552985, Fax: +91 674 2552986<br>Email: alcentechnologies@gmail.com<br><a href="/login"><i class="fas fa-user" style="color:white;">Admin Login</i><a></p>
-          </div>
-        </div>
-    </footer>
+  <br><br>
+  <footer id="bottom" class="page-footer">
+    <div class="row">
+      <div class="col-lg-6">
+        <p id="company-name">Alcen Technologies Private Limited<br><span class="tagline">technologies you can rely on..</p>
+      </div>
+      <div class="col-lg-6">
+        <p id="footer-text">Plot No.- 24/1/A, Chandaka industial Estate,Near NIFT Building,KIIT Campus,BHUBANESWAR-751024. ,Odisha<br>Tel.:+91 674 2552984 2552985, Fax: +91 674 2552986<br>Email: alcentechnologies@gmail.com<br><a href="/login"><i
+              class="fas fa-user" style="color:white;">Admin Login</i><a></p>
+      </div>
+    </div>
+  </footer>
 
 
 
