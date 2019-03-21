@@ -53,6 +53,7 @@ router.get('/career', function(req, res, next) {
     res.render('career', {
       "datas": data
     });
+    //res.status(200).send(data)
   })
 });
 
